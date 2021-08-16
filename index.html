@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>FizzBuzz</title>
+    </head>
+    <body>
+        <script>
+            function fizzBuzzFunc(){
+                var fizz = document.getElementById('fizz');
+                var buzz = document.getElementById('buzz');
+                var fizzValue = fizz.value;
+                var buzzValue = buzz.value;
+                var fizzValue2 = fizzValue*2;
+                var buzzValue2 = buzzValue*2;
+                console.log(fizzValue2);
+
+                var max2 = Math.max(fizzValue2,buzzValue2);
+                var min2 = Math.min(fizzValue2,buzzValue2);
+
+                var str;
+                var str2;
+                if (fizzValue2 % buzzValue == 0){
+                    str = "fizzbuzz"
+                }else{
+                    str = "fizz"
+                }
+
+                if (buzzValue2 % fizzValue == 0){
+                    str2 = "fizzbuzz"
+                }else{
+                    str2 = "buzz"
+                }
+
+                document.getElementById('output').innerText =  //textContent is not '\n'
+                    "fizz" + fizzValue + '\n' +
+                    "buzz" + buzzValue + '\n' +
+                    str + min2 + '\n' +
+                    str2 + max2 + '\n';
+            }
+        </script>
+        <h1>FizzBuzz</h1>
+            FizzNum: <input type="text" id="fizz"><br>
+            BuzzNum: <input type="text" id="buzz"><br>
+            <input type="submit" value="実行" onclick="fizzBuzzFunc()"><br>
+            <div>[出力]</div>
+            <p id="output"></p>
+    </body>
+</html>
