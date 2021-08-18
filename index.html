@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
     <head>
         <meta charset="UTF-8">
         <title>FizzBuzz</title>
@@ -13,7 +13,7 @@
                 var buzzValue = buzz.value;
                 var fizzValue2 = fizzValue*2;
                 var buzzValue2 = buzzValue*2;
-                console.log(fizzValue2);
+                console.log(fizzValue2.length);
 
                 var max2 = Math.max(fizzValue2,buzzValue2);
                 var min2 = Math.min(fizzValue2,buzzValue2);
@@ -40,8 +40,8 @@
             }
         </script>
         <h1>FizzBuzz</h1>
-            FizzNum: <input type="text" id="fizz"><br>
-            BuzzNum: <input type="text" id="buzz"><br>
+            FizzNum: <input type="text" id="fizz" placeholder="整数値のみを入力してください"><br>
+            BuzzNum: <input type="text" id="buzz" placeholder="整数値のみを入力してください"><br>
             <input type="submit" value="実行" onclick="fizzBuzzFunc()"><br>
             <div>[出力]</div>
             <p id="output"></p>
